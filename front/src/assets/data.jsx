@@ -1,4 +1,4 @@
-import { icon1, icon2, icon3 } from '../../components/Images';
+import { icon1, icon2, icon3 } from '../components/Images';
 
 const skills = [
     {

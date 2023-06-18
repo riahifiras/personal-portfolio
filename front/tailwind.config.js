@@ -7,6 +7,9 @@ export default {
   theme: {
     extend: {
       spacing: {
+        screen:{
+          'eighty': '100vh',
+        }
       }
     },
   },

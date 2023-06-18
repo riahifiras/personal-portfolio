@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Skill = ({icon, title, description, title1,  applications, title2, tools}) => {
   return (
     <div className='h-full w-1/3 px-4 border-l-2 flex flex-col justify-start items-center text-black text-center gap-4'>
