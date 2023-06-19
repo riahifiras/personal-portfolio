@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    .contact-link {
+      @apply rounded-full border border-white bg-blue-700 text-white w-12 h-12 flex justify-center items-center hover:bg-white hover:text-blue-700 transition duration-200;
+    }
+  }
