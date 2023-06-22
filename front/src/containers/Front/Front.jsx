@@ -2,6 +2,7 @@ import React from 'react';
 import { image1 } from '../../components/Images';
 import './Front.css'
 
+
 const Front = () => {
   return (
     <div className='w-full h-screen flex justify-evenly items-center flex-row'>
