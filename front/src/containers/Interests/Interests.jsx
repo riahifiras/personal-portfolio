@@ -11,10 +11,10 @@ const Interests = () => {
         As a computer science engineering student, I'm passionate about delving into various computer science-related activities outside of my curriculum. These pursuits allow me to explore diverse areas of interest and expand my knowledge and skills beyond the confines of the classroom.
         </h1>
         <div className='w-full flex justify-center items-center gap-5'>
-            <Interest image={robotics}/>
-            <Interest image={cp}/>
-            <Interest image={security}/>
-            <Interest image={hack}/>
+            <Interest image={robotics} title="Robotics"/>
+            <Interest image={cp} title="Competetive Programming"/>
+            <Interest image={security} title="Cybersecurity"/>
+            <Interest image={hack} title="Hackathons"/>
         </div>
     </div>
   )
