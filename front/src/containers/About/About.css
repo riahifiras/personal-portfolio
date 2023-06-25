@@ -1,3 +1,13 @@
-.half-screen{
-    height: 80vh;
+.ffs{
+    display: none;
 }
+
+#almost{
+    height: auto;
+}
+
+@media screen and (min-width: 1024px) {
+    #almost{
+        height: 100vh;
+    }
+  }

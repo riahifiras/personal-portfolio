@@ -21,9 +21,7 @@ const Interest = ({ image, title }) => {
   return (
     <>
       <div
-        className={`w-1/5 h-auto border-2 rounded-2xl shadow-lg ${
-          isHovered ? 'hover:scale-105' : ''
-        } transition duration-500 relative`}
+        className={`w-11/12 lg:w-1/5 h-auto border-2 rounded-2xl shadow-lg ${isHovered ? 'hover:scale-105' : ''} transition duration-500 relative mx-auto`}
         onMouseEnter={handleHover}
         onMouseLeave={handleMouseLeave}
       >

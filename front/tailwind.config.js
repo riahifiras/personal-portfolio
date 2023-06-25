@@ -6,11 +6,9 @@ export default {
   ],
   theme: {
     extend: {
-      spacing: {
-        screen:{
-          'eighty': '100vh',
-        }
-      }
+      height: {
+        'half-screen': '80vh',
+      },
     },
   },
   plugins: [],

@@ -34,7 +34,7 @@ function Header() {
             return(
                 <>
                     <div id='me' className='h-16 sticky top-0 right-0 w-full flex justify-between items-center z-10 text-black bg-white'>
-                        <h3 className='text-5xl font-bold ml-8 text-blue-700'>Firas.</h3>
+                        <h3 className='lg:text-5xl text-3xl font-bold ml-8 text-blue-700'>Firas.</h3>
                         <button onClick={toggleMenu} className='flex items-center justify-center mr-2 text-lg font-semibold'>
                             <FaTimes />
                         </button>
@@ -45,7 +45,7 @@ function Header() {
         }
         return (
             <div className='h-16 sticky top-0 right-0 w-full flex justify-between items-center z-10 text-black bg-white'>
-                <h3 className='text-5xl font-bold ml-8 text-blue-700'>Firas.</h3>
+                <h3 className='lg:text-5xl text-3xl font-bold ml-8 text-blue-700'>Firas.</h3>
                 <button onClick={toggleMenu} className='flex items-center justify-center mr-2 text-lg font-semibold'>
                     <FaBars />
                 </button>
@@ -54,7 +54,7 @@ function Header() {
     }
   return (
     <div className='h-16 sticky top-0 right-0 w-full flex justify-between items-center z-10 text-black bg-white'>
-        <h3 className='text-5xl font-bold ml-8 text-blue-700'>Firas.</h3>
+        <h3 className='lg:text-5xl text-3xl font-bold ml-8 text-blue-700'>Firas.</h3>
         <Navbar/>
     </div>
   )

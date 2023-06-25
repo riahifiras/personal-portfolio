@@ -1,6 +1,6 @@
 const Skill = ({icon, title, description, title1,  applications, title2, tools}) => {
   return (
-    <div className='h-full w-1/3 px-4 border-l-2 flex flex-col justify-start items-center text-black text-center gap-4'>
+    <div className='h-full w-11/12 lg:w-1/3 px-4 border-b-2 lg:border-l-2 lg:border-b-0 flex flex-col justify-start items-center text-black text-center gap-4 lg:py-0 py-6'>
         <img src={icon} alt="icon" className='w-24 h-auto'/>
         <h1 className='text-xl font-bold'>{title}</h1>
         <p className='max-h-64'>{description}</p>
