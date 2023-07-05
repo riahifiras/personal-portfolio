@@ -1,9 +1,0 @@
-.negative{
-    margin-bottom: 0px;
-}
-
-@media screen and (min-width: 1024px) {
-    .negative{
-        margin-bottom: -300px;
-    }
-  }
