@@ -1,0 +1,13 @@
+.pos{
+    transform: translateY(0px);
+}
+
+.almost{
+    height: auto;
+}
+
+@media screen and (min-width: 1024px) {
+    .pos{
+        transform: translateY(300px);
+    }
+  }

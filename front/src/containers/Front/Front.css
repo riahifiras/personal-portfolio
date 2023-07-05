@@ -1,0 +1,18 @@
+.size{
+    height: 320px;
+    width: auto;
+}
+
+@media screen and (min-width: 1024px) {
+    .size{
+        height: 560px;
+        width: auto;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .size{
+        height: 400px;
+        width: auto;
+    }
+  }
