@@ -15,7 +15,7 @@ const Interest = ({ image, title }) => {
   };
 
   const handleClick = () => {
-    setIsClicked(true);
+    window.location.href = `/slider/${title}`
   };
 
   return (
