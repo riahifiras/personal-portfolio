@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { logo } from "../Images";
 
-const Project = () => {
+const Project = ({image, url, name}) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleHover = () => {
@@ -17,15 +16,15 @@ const Project = () => {
     onMouseEnter={handleHover}
     onMouseLeave={handleMouseLeave}>
       <img
-        src={logo}
+        src={image}
         alt="project"
-        className="rounded-xl shadow-lg transition duration-200 cursor-pointer"
+        className="rounded-xl shadow-lg transition duration-200 cursor-pointer aspect-video object-cover h-48"
         style={isHovered ? { filter: 'contrast(0.7) brightness(0.4)' } : {}}
       />
       {isHovered && (
           <div className="absolute inset-0 flex flex-col gap-6 items-center justify-center bg-black bg-opacity-0 transition-opacity duration-500">
-            <p className="text-white text-3xl font-semibold text-center cursor-default">Project</p>
-            <a className='flex justify-center items-center h-10 w-36 mt-6 rounded-full bg-white text-black hover:bg-slate-300 text-xl font-semibold transition duration-200 cursor-pointer' href="https://github.com/riahifiras" target="_blank" rel="noreferrer">See more</a>
+            <p className="text-white text-3xl font-semibold text-center cursor-default">{name}</p>
+            <a className='flex justify-center items-center h-10 w-36 mt-6 rounded-full bg-white text-black hover:bg-slate-300 text-xl font-semibold transition duration-200 cursor-pointer' href={url} target="_blank" rel="noreferrer">See more</a>
           </div>
         )}
     </div>
