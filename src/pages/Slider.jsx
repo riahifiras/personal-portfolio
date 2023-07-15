@@ -1,6 +1,8 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Header from "../containers/Header/Header"
 import { ctf, cpc, hackathon, robotics } from "../data"
+import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
+
 
 const Slider = () => {
 
@@ -10,8 +12,6 @@ const Slider = () => {
   else if (window.location.pathname.endsWith("Cybersecurity")) { images = ctf }
   else if (window.location.pathname.endsWith("Hackathons")) { images = hackathon }
   else if (window.location.pathname.endsWith("Programming")) { images = cpc }
-
-  console.log(images);
 
   const [currentImage, setCurrentImage] = useState(0);
 
@@ -24,16 +24,29 @@ const Slider = () => {
     }
   }
 
+  const handleKeyDown = (e) => {
+    e.key == "ArrowLeft" ? handleClick("left") : {};
+    e.key == "ArrowRight" ? handleClick("right") : {};
+
+  }
+
+  useEffect(() => {
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [handleKeyDown]);
+
   return (
     <div className="w-screen h-screen">
       <Header />
       <div className="translate-y-20 flex flex-col justify-center items-center gap-6">
         <div className="flex flex-row items-center gap-4">
           <button
-            className="flex items-center justify-center shadow-md rounded-full w-14 h-14 border-2 transition duration-200 hover:scale-110"
+            className="flex items-center justify-center shadow-md rounded-full w-14 h-14 border-2 text-gray-400 transition duration-200 hover:scale-110 hover:text-black"
             onClick={() => handleClick("left")}
           >
-            {'<'}
+            <FaAngleLeft />
           </button>
           <div className="shadow-lg aspect-video object-cover rounded-xl bg-black flex justify-center items-center" style={{ width: '1200px', maxHeight: '100vh' }}>
             <img
@@ -43,10 +56,10 @@ const Slider = () => {
             />
           </div>
           <button
-            className="flex items-center justify-center shadow-md rounded-full w-14 h-14 border-2 transition duration-200 hover:scale-110"
+            className="flex items-center justify-center shadow-md rounded-full w-14 h-14 border-2 text-gray-400 transition duration-200 hover:scale-110 hover:text-black"
             onClick={() => handleClick("right")}
           >
-            {'>'}
+            <FaAngleRight />
           </button>
         </div>
         <p className="translate-y-6 text-xl">{images[currentImage].description}</p>
