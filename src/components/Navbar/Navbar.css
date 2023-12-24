@@ -4,6 +4,24 @@
 
 @layer components {
     .nav {
-      @apply hover:text-blue-700 transition duration-100;
+      @apply hover:text-blue-700 transition duration-300 ease-in-out relative;
     }
   }
+  
+  .nav:after {
+    bottom: -6px;
+    content: "";
+    height: 4px;
+    left: 0%;
+    position: absolute;
+    background: rgb(29 78 216);
+    border-radius: 2px;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  
+  .nav:hover:after {
+    width: 100%;
+    left: 0;
+  }
+  

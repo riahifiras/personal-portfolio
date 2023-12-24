@@ -1,18 +1,38 @@
 .size{
-    height: 320px;
+    height: 900px;
     width: auto;
+    transform: translateY(-64px);
 }
 
-@media screen and (min-width: 1024px) {
+.name{
+    font-size: 180px;
+}
+
+.up{
+    transform: translateY(0);
+}
+
+@media screen and (max-width: 1024px) {
     .size{
-        height: 560px;
+        height: 320px;
+        width: auto;
+    }
+
+    .name{
+        font-size: 60px;
+    }
+
+    .up{
+        transform: translateY(-432px);
+    }
+    
+  }
+
+  @media screen and (max-width: 768px) {
+    .size{
+        height: 320px;
         width: auto;
     }
   }
 
-  @media screen and (min-width: 768px) {
-    .size{
-        height: 400px;
-        width: auto;
-    }
-  }
+  /* style={{ height: '900px', transform: 'translateY(-64px)' }} */
