@@ -18,8 +18,12 @@ function Header() {
   const handleScroll = () => {
     const currentPosition = window.scrollY;
     setScrollPosition(currentPosition);
-
-    if (currentPosition > 200) {
+  
+    // Calculate the scroll position based on viewport height
+    const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+    const scrollThreshold = 100 * vh / 100; // Change 100 to the desired percentage
+  
+    if (currentPosition > scrollThreshold) {
       setScrolling(true);
     } else {
       setScrolling(false);
