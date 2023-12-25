@@ -83,7 +83,7 @@ function Header() {
     }
     return (
       <div
-        className={`h-16 sticky top-0 right-0 w-full flex justify-between items-center z-10 text-black`}
+        className={`h-16 sticky top-0  right-0 w-full flex justify-between items-center z-10 text-black`}
         style={headerStyle}
       >
         <h3
