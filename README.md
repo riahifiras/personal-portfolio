@@ -1,2 +1,2 @@
 # personal-portfolio
-A small personal portfolio website
+A personal portfolio website
