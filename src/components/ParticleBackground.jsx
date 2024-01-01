@@ -37,14 +37,6 @@ const ParticleBackground = () => {
       fpsLimit: 120,
       interactivity: {
         events: {
-          onClick: {
-            enable: true,
-            mode: "push",
-          },
-          onHover: {
-            enable: true,
-            mode: "repulse",
-          },
         },
         modes: {
           push: {
@@ -65,7 +57,7 @@ const ParticleBackground = () => {
           distance: 150,
           enable: true,
           opacity: 0.5,
-          width: 2,
+          width: 3,
         },
         move: {
           direction: "none",
@@ -74,7 +66,7 @@ const ParticleBackground = () => {
             default: "bounce",
           },
           random: false,
-          speed: 6,
+          speed: 2,
           straight: false,
         },
         number: {
