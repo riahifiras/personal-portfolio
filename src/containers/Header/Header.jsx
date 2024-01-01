@@ -108,11 +108,11 @@ function Header() {
 
   return (
     <div
-      className={`h-16 sticky top-0 right-0 w-full flex justify-between items-center z-10 text-black`}
+      className={`h-24 sticky top-0 right-0 w-full flex justify-between items-center z-10 text-black`}
       style={headerStyle}
     >
       <h3
-        className='lg:text-5xl text-3xl font-bold ml-8 text-blue-700 cursor-pointer'
+        className='lg:text-5xl text-3xl font-bold ml-40 text-blue-700 cursor-pointer'
         onClick={() => (window.location.pathname = '/')}
       >
         Firas.
