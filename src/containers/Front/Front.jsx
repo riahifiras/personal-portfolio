@@ -46,15 +46,10 @@ const Front = () => {
     backgroundPosition: 'center', // You can customize the background position as needed
   };
 
-  const particlesLoaded = (container) => {
-    console.log(container);
-  };
-
   return (
     <>
       {!scrolling ? (
         <div className='w-full h-[100vh] -mt-16 fixed'>
-          <ParticleBackground particlesLoaded={particlesLoaded} />
           <div className='w-full h-screen translate-y-24 lg:translate-y-0 flex justify-between items-center flex-col-reverse lg:flex-row relative'>
             <div className='flex flex-col up lg:ml-40 items-center text-left lg:items-start w-3/4 lg:w-1/2'>
               <h1 className='flex flex-col gap-4 lg:text-7xl text-3xl font-semibold font-euro unselectable'>Hi, I'm <br /><span className='whitespace-nowrap name'>Firas <span className='text-blue-600'>Riahi</span></span></h1>
@@ -75,7 +70,7 @@ const Front = () => {
           </div>
         </div>
       ) : (
-        <div className='w-full relative'></div>
+        <div className='w-full relative bg-white'></div>
       )}
 
     </>
