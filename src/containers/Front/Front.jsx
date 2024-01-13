@@ -1,7 +1,7 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { Typewriter, Cursor } from 'react-simple-typewriter'
-import ParticleBackground from '../../components/ParticleBackground';
+import { DarkModeContext } from "../../context/DarkModeContext"
 import Header from '../Header/Header';
 import { me, image1, backgroundImg } from '../../components/Images';
 import './Front.css'
@@ -10,6 +10,7 @@ import './Front.css'
 const Front = () => {
   const [scrolling, setScrolling] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
+  const {darkMode} = useContext(DarkModeContext);
 
   const handleScroll = () => {
     const currentPosition = window.scrollY;
@@ -52,10 +53,10 @@ const Front = () => {
         <div className='w-full h-[100vh] -mt-16 fixed'>
           <div className='w-full h-screen translate-y-24 lg:translate-y-0 flex justify-between items-center flex-col-reverse lg:flex-row relative'>
             <div className='flex flex-col up lg:ml-40 items-center text-left lg:items-start w-3/4 lg:w-1/2'>
-              <h1 className='flex flex-col gap-4 lg:text-7xl text-3xl font-semibold font-euro unselectable'>Hi, I'm <br /><span className='whitespace-nowrap name'>Firas <span className='text-blue-600'>Riahi</span></span></h1>
+              <h1 className='flex flex-col gap-4 lg:text-7xl text-3xl font-semibold font-euro unselectable'><span className={darkMode ? "text-black" : "text-white"}>Hi, I'm</span><span className='whitespace-nowrap name'><span className={darkMode ? "text-black" : "text-white"}>Firas </span><span className='text-blue-600'>Riahi</span></span></h1>
               <br />
               <h3 className='unselectable lg:text-4xl text-xl font-[500]'>
-                I am a
+              <span className={darkMode ? "text-black" : "text-white"}>I am a</span>
                 <span className='text-blue-700'>
                   <Typewriter
                     words={[' Frontend developer', ' Game developer', ' Graphic designer']}

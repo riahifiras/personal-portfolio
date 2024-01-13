@@ -1,4 +1,5 @@
-import React from 'react'
+import {useContext} from 'react'
+import { DarkModeContext } from '../../context/DarkModeContext'
 import Project from '../../components/Project/Project'
 import cluedo from '../../assets/cluedo.png'
 import tkinter from '../../assets/tkinter.png'
@@ -8,10 +9,11 @@ import { logo } from '../../components/Images'
 import robotics3 from '../../assets/robotics3.jpg'
 
 const Projects = () => {
+  const {darkMode} = useContext(DarkModeContext);
   return (
-    <div id='Projects' className='bg-white flex flex-col  items-center lg:h-screen mb-24 lg:gap-24 gap-6 my-10'>
-        <h1 className='lg:text-7xl font-semibold'>My recent work</h1>
-        <h3 className='lg:text-3xl text-center'>Here are a few projects I've worked on. Want to see more? Email me.</h3>
+    <div id='Projects' className={`${darkMode ? "bg-white" : "bg-[#16181d]"} flex flex-col  items-center lg:h-screen mb-24 lg:gap-24 gap-6 my-10`}>
+        <h1 className={`lg:text-7xl font-semibold ${darkMode ? "text-black" : "text-white"}`}>My recent work</h1>
+        <h3 className={`lg:text-3xl text-center ${darkMode ? "text-black" : "text-white"}`}>Here are a few projects I've worked on. Want to see more? Email me.</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <Project image={logo} name ={"brika"} url={"https://github.com/riahifiras/recipe-website"}/>
             <Project image={tkinter} name ={"Stock manager"} url={"https://github.com/riahifiras/stock-managment-app"}/>

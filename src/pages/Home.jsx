@@ -1,4 +1,6 @@
-import { createContext, useContext, useState } from 'react'
+import { useContext } from 'react'
+import { DarkModeContext } from '../context/DarkModeContext'
+import DarkModeProvider from '../context/DarkModeContext'
 import ParticleBackground from '../components/ParticleBackground'
 import Header from '../containers/Header/Header'
 import Front from '../containers/Front/Front'
@@ -7,24 +9,23 @@ import Interests from '../containers/Interests/Interests'
 import Projects from '../containers/Projects/Projects'
 import Footer from '../containers/Footer/Footer'
 
-const ThemeContext = createContext('light');
 
 function Home() {
-  const [theme, setTheme] = useState('light');
+  const {darkMode} = useContext(DarkModeContext);
   return (
-    <ThemeContext.Provider value={theme}>
+    <>
       <Header />
       <ParticleBackground />
       <Front />
       <About />
-      <div className="bg-white">
+      <div className={`${darkMode ? "bg-white" : "bg-[#16181d]"}`}>
         <hr />
         <Interests />
         <hr />
         <Projects />
         <Footer />
       </div>
-    </ThemeContext.Provider>
+    </>
   )
 }
 

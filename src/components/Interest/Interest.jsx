@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { DarkModeContext } from '../../context/DarkModeContext';
 import Slider from '../../containers/Slider/Slider';
 import './Interest.css'
 
 const Interest = ({ image, title }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
+  const {darkMode} = useContext(DarkModeContext);
 
   const handleHover = () => {
     setIsHovered(true);
@@ -21,7 +23,7 @@ const Interest = ({ image, title }) => {
   return (
     <>
       <div
-        className={`w-11/12 lg:w-1/5 h-auto border-2 rounded-2xl shadow-lg ${isHovered ? 'hover:scale-105' : ''} transition duration-500 relative mx-auto`}
+        className={`w-11/12 lg:w-1/5 h-auto border-2 ${darkMode ? "border-gray-200" : "border-gray-700"} rounded-2xl shadow-lg ${isHovered ? 'hover:scale-105' : ''} transition duration-500 relative mx-auto`}
         onMouseEnter={handleHover}
         onMouseLeave={handleMouseLeave}
       >

@@ -1,6 +1,7 @@
 import Navbar from '../../components/Navbar/Navbar';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import { DarkModeContext } from "../../context/DarkModeContext"
 import DropDownMenu from '../../components/DropDownMenu/DropDownMenu';
 
 function Header() {
@@ -8,6 +9,8 @@ function Header() {
   const [showMenu, setShowMenu] = useState(false);
   const [scrolling, setScrolling] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
+  const {darkMode} = useContext(DarkModeContext);
+
 
   const path = window.location.pathname;
 
@@ -52,7 +55,7 @@ function Header() {
 
   const headerStyle = {
     transition: 'background-color 0.3s ease',
-    backgroundColor: scrolling ? 'white' : 'transparent',
+    backgroundColor: scrolling ? darkMode ? "white" : "#16181d" : 'transparent',
   };
 
   if (isSmall) {
@@ -108,7 +111,7 @@ function Header() {
 
   return (
     <div
-      className={`h-24 sticky top-0 right-0 w-full flex justify-between items-center z-10 text-black`}
+      className={`h-24 sticky top-0 right-0 w-full flex justify-between items-center z-10 text-${darkMode ? "black" : "white"}`}
       style={headerStyle}
     >
       <h3
