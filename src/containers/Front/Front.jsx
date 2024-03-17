@@ -71,7 +71,7 @@ const Front = () => {
           </div>
         </div>
       ) : (
-        <div className='w-full relative bg-white'></div>
+        <div className='w-full relative bg-[#cbd4d4]'></div>
       )}
 
     </>

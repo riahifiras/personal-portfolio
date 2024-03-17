@@ -24,7 +24,7 @@ const Project = ({image, url, name}) => {
       {isHovered && (
           <div className="absolute inset-0 flex flex-col gap-6 items-center justify-center bg-black bg-opacity-0 transition-opacity duration-500">
             <p className="text-white text-3xl font-semibold text-center cursor-default">{name}</p>
-            <a className='flex justify-center items-center h-10 w-36 mt-6 rounded-full bg-white text-black hover:bg-slate-300 text-xl font-semibold transition duration-200 cursor-pointer' href={url} target="_blank" rel="noreferrer">See more</a>
+            <a className='flex justify-center items-center h-10 w-36 mt-6 rounded-full bg-[#cbd4d4] text-black hover:bg-slate-300 text-xl font-semibold transition duration-200 cursor-pointer' href={url} target="_blank" rel="noreferrer">See more</a>
           </div>
         )}
     </div>

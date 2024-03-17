@@ -1,0 +1,55 @@
+import { useState, useEffect, useRef } from "react";
+import { IoIosArrowDown } from "react-icons/io";
+import "../../containers/About/About.css"
+
+const Domain = ({ index, icon, title, tools, description }) => {
+  const [isClicked, setIsClicked] = useState(false);
+  const divRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (divRef.current && !divRef.current.contains(event.target)) {
+        setIsClicked(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [divRef]);
+
+  return (
+    <div className={`slide-in-left${index} pt-2 w-[90%] flex flex-col my-1 flex-grow shadow-lg cursor-pointer bg-gray-800 text-white rounded-[40px] hover:shadow-xl relative`} ref={divRef}>
+      <div
+        className="flex justify-between items-center px-10 w-full h-[164px] absolute"
+        onClick={() => setIsClicked(!isClicked)}
+      >
+        <img src={icon} alt="" className="h-20 w-auto" />
+        <h1 className="w-[70%] font-semibold text-3xl">{title}</h1>
+        <div className="relative">
+          <IoIosArrowDown
+            className={`text-4xl transition-transform ${isClicked ? "-rotate-90" : "rotate-0"
+              }`}
+          />
+        </div>
+      </div>
+      <div className={`overflow-hidden transition-max-h duration-500 ${isClicked ? "max-h-48" : "max-h-0"} translate-y-40 w-full`}>
+        <p className="px-10 pb-2 text-md">
+          {description}
+        </p>
+        <h2 className="px-10 pb-2 text-xl">Tools i use</h2>
+        <div className="px-10 pb-20 flex gap-2 w-full">
+          {tools.map((pic, index) => {
+            return (
+              <img key={index} className="w-12 h-auto" src={pic} alt="" />
+            );
+          })}
+
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Domain;

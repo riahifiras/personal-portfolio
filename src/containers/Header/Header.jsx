@@ -55,7 +55,7 @@ function Header() {
 
   const headerStyle = {
     transition: 'background-color 0.3s ease',
-    backgroundColor: scrolling ? darkMode ? "white" : "#16181d" : 'transparent',
+    backgroundColor: scrolling ? darkMode ? "#cbd4d4" : "#16181d" : 'transparent',
   };
 
   if (isSmall) {

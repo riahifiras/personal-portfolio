@@ -18,10 +18,7 @@ function Home() {
       <ParticleBackground />
       <Front />
       <About />
-      <div className={`${darkMode ? "bg-white" : "bg-[#16181d]"}`}>
-        <hr />
-        <Interests />
-        <hr />
+      <div className={`${darkMode ? "bg-[#cbd4d4]" : "bg-[#16181d]"}`}>
         <Projects />
         <Footer />
       </div>

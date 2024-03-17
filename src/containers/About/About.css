@@ -6,6 +6,48 @@
     height: auto;
 }
 
+@keyframes slideInLeft {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-right{
+  animation: slideInRight 2500ms ease forwards;
+}
+
+.slide-in-left1 {
+  animation: slideInLeft 1s ease forwards;
+}
+
+.slide-in-left2 {
+  animation: slideInLeft 1500ms ease forwards;
+}
+
+.slide-in-left3 {
+  animation: slideInLeft 2000ms ease forwards;
+}
+
+.slide-in-left4 {
+  animation: slideInLeft 2500ms ease forwards;
+}
+
 @media screen and (min-width: 1024px) {
     #almost{
         height: 100vh;

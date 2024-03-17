@@ -33,7 +33,7 @@ const ParticleBackground = () => {
     () => ({
       background: {
         color: {
-          value: darkMode ? "#fff" : "#16181d",
+          value: darkMode ? "#cbd4d4" : "#16181d",
         },
       },
       fpsLimit: 120,
