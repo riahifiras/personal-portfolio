@@ -1,15 +1,31 @@
-.size{
+.size {
     height: 900px;
     width: auto;
     transform: translateY(-64px);
 }
 
-.name{
+.name {
     font-size: 180px;
 }
 
-.up{
+.up {
     transform: translateY(0);
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slide-in-right {
+    animation: slideInRight 2500ms ease forwards;
 }
 
 .unselectable {
@@ -22,26 +38,26 @@
 }
 
 @media screen and (max-width: 1024px) {
-    .size{
+    .size {
         height: 320px;
         width: auto;
     }
 
-    .name{
+    .name {
         font-size: 60px;
     }
 
-    .up{
+    .up {
         transform: translateY(-432px);
     }
-    
-  }
 
-  @media screen and (max-width: 768px) {
-    .size{
+}
+
+@media screen and (max-width: 768px) {
+    .size {
         height: 320px;
         width: auto;
     }
-  }
+}
 
-  /* style={{ height: '900px', transform: 'translateY(-64px)' }} */
+/* style={{ height: '900px', transform: 'translateY(-64px)' }} */

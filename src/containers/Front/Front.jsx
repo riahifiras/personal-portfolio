@@ -48,18 +48,18 @@ const Front = () => {
   };
 
   return (
-    <>
+    <div id='Home'>
       {!scrolling ? (
         <div className='w-full h-[100vh] -mt-16 fixed'>
           <div className='w-full h-screen translate-y-24 lg:translate-y-0 flex justify-between items-center flex-col-reverse lg:flex-row relative'>
-            <div className='flex flex-col up lg:ml-40 items-center text-left lg:items-start w-3/4 lg:w-1/2'>
-              <h1 className='flex flex-col gap-4 lg:text-7xl text-3xl font-semibold font-euro unselectable'><span className={darkMode ? "text-black" : "text-white"}>Hi, I'm</span><span className='whitespace-nowrap name'><span className={darkMode ? "text-black" : "text-white"}>Firas </span><span className='text-blue-600'>Riahi</span></span></h1>
+            <div className='flex flex-col up lg:ml-40 items-center text-left lg:items-start w-3/4 lg:w-1/2 slide-in-right'>
+              <h1 className='flex flex-col gap-4 lg:text-7xl text-3xl font-semibold font-euro unselectable'><span className={darkMode ? "text-black" : "text-white"}>Hi, I'm</span><span className='whitespace-nowrap name'><span className={darkMode ? "text-black" : "text-white"}>Firas </span><span className='text-blue-700'>Riahi</span></span></h1>
               <br />
               <h3 className='unselectable lg:text-4xl text-xl font-[500]'>
               <span className={darkMode ? "text-black" : "text-white"}>I am a</span>
                 <span className='text-blue-700'>
                   <Typewriter
-                    words={[' Frontend developer', ' Game developer', ' Graphic designer']}
+                    words={[' Web developer', ' Game developer', ' Graphic designer', ' CAD designer']}
                     loop={true}
                   />
                 </span>
@@ -74,7 +74,7 @@ const Front = () => {
         <div className='w-full relative bg-[#cbd4d4]'></div>
       )}
 
-    </>
+    </div>
   );
 
 };
