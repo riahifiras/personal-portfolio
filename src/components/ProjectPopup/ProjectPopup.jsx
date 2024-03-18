@@ -25,9 +25,9 @@ const ProjectPopup = ({ onClose }) => {
                 <img className="h-[540px] rounded-l-lg w-auto" src={robotics} alt="" />
                 <div className="w-full px-4 pt-4 flex flex-col gap-8">
                     <div className="flex justify-between w-full">
-                        <p className="text-xl">Line follower</p>
+                        <p className="text-md">Line follower</p>
                         <button
-                            className="relative flex justify-center items-center text-2xl font-bold h-8 w-8 bg-gray-300 text-gray-800 rounded-full hover:bg-gray-400 transition duration-200"
+                            className="relative flex justify-center items-center text-lg font-bold h-8 w-8 bg-gray-300 text-gray-800 rounded-full hover:bg-gray-400 transition duration-200"
                             onClick={onClose}
                         >
                             <RxCross2 />

@@ -18,7 +18,7 @@ function PauseOnHover({ set }) {
             <Slider {...settings}>
                 {set.map((element, index) => {
                     return (
-                        <div key={index} className="shadow-lg aspect-video w-[80%] h-[480px] bg-black flex justify-center items-center">
+                        <div key={index} className="shadow-lg aspect-video w-[80%] h-[360px] bg-black flex justify-center items-center">
                             <img
                                 src={element.image}
                                 alt="photo"

@@ -62,7 +62,7 @@ const Slider = () => {
             <FaAngleRight />
           </button>
         </div>
-        <p className="translate-y-6 text-xl">{images[currentImage].description}</p>
+        <p className="translate-y-6 text-md">{images[currentImage].description}</p>
       </div>
     </div>
 

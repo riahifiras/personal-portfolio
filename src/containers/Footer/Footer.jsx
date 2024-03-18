@@ -5,7 +5,7 @@ import './Footer.css'
 
 const Footer = () => {
   return (
-    <div id='Contact' className='bg-blue-700 text-white h-96 w-full pt-10'>
+    <div id='Contact' className='bg-blue-700 text-white h-44 w-full'>
         <Offer/>
         <div className='flex flex-col mx-auto gap-10 bg-blue-700'>
           <p className='ml-auto mr-auto'>Made with love and passion, :D</p>

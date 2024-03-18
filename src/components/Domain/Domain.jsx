@@ -57,20 +57,20 @@ const Domain = ({ index, icon, title, tools, description }) => {
 
   return (
     <div
-      className={`pt-2 w-[90%] flex flex-col my-1 flex-grow shadow-lg cursor-pointer bg-gray-800 text-white rounded-[40px] hover:shadow-xl relative ${
+      className={`w-[90%] flex flex-col my-1 flex-grow shadow-lg cursor-pointer bg-gray-800 text-white rounded-[40px] hover:shadow-xl relative ${
         isVisible ? `slide-in-left2` : ""
       }`}
       ref={divRef}
     >
       <div
-        className={`flex justify-between items-center px-10 w-full h-[164px] absolute -translate-y-2`}
+        className={`flex justify-between items-center px-10 w-full h-[132px] absolute`}
         onClick={handleDropdownToggle}
       >
-        <img src={icon} alt="" className="h-20 w-auto" />
-        <h1 className="w-[70%] font-semibold text-3xl">{title}</h1>
+        <img src={icon} alt="" className="h-16 w-auto" />
+        <h1 className="w-[70%] font-semibold text-xl">{title}</h1>
         <div className="relative">
           <IoIosArrowDown
-            className={`text-4xl transition-transform ${
+            className={`text-2xl transition-transform ${
               isClicked ? "-rotate-90" : "rotate-0"
             }`}
           />
@@ -78,14 +78,14 @@ const Domain = ({ index, icon, title, tools, description }) => {
       </div>
       <div
         className={`overflow-hidden transition-max-h duration-500 ${
-          isClicked ? "max-h-48" : "max-h-0"
-        } translate-y-[164px] w-full`}
+          isClicked ? "max-h-[132px]" : "max-h-0"
+        } translate-y-[100px] w-full`}
       >
-        <p className="px-10 pb-2 text-md">{description}</p>
-        <h2 className="px-10 pb-2 text-xl">Tools i use</h2>
+        <p className="px-10 pb-2 text-sm">{description}</p>
+        <h2 className="px-10 pb-2 text-md">Tools i use</h2>
         <div className="px-10 pb-20 flex gap-2 w-full">
           {tools.map((pic, index) => {
-            return <img key={index} className="w-12 h-auto" src={pic} alt="" />;
+            return <img key={index} className="w-8 h-auto" src={pic} alt="" />;
           })}
         </div>
       </div>

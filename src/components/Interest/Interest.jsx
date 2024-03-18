@@ -35,8 +35,8 @@ const Interest = ({ image, title }) => {
         />
         {isHovered && (
           <div className="absolute inset-0 flex flex-col gap-6 items-center justify-center bg-black bg-opacity-0 transition-opacity duration-500">
-            <p className="text-white text-4xl font-semibold text-center cursor-default">{title}</p>
-            <button className='flex justify-center items-center h-10 w-36 mt-6 rounded-full bg-[#cbd4d4] text-black hover:bg-slate-300 text-xl font-semibold transition duration-200 cursor-pointer' onClick={handleClick}>See more</button>
+            <p className="text-white text-2xl font-semibold text-center cursor-default">{title}</p>
+            <button className='flex justify-center items-center h-10 w-36 mt-6 rounded-full bg-[#cbd4d4] text-black hover:bg-slate-300 text-md font-semibold transition duration-200 cursor-pointer' onClick={handleClick}>See more</button>
           </div>
         )}
       </div>
