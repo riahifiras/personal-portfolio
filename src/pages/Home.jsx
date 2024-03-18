@@ -19,6 +19,7 @@ function Home() {
       <Front />
       <About />
       <div className={`${darkMode ? "bg-[#cbd4d4]" : "bg-[#16181d]"}`}>
+        <Interests/>
         <Projects />
         <Footer />
       </div>

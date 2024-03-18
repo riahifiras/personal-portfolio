@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from 'react';
 import { DarkModeContext } from '../../context/DarkModeContext';
 import Domain from '../../components/Domain/Domain';
 import domains from '../../assets/data';
+import './About.css'
 
 const About = () => {
   const { darkMode } = useContext(DarkModeContext);

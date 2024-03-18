@@ -17,7 +17,7 @@ const Domain = ({ index, icon, title, tools, description }) => {
       {
         root: null,
         rootMargin: "0px",
-        threshold: 0.5, // Adjust the threshold as needed
+        threshold: 0, // Adjust the threshold as needed
       }
     );
 
@@ -58,7 +58,7 @@ const Domain = ({ index, icon, title, tools, description }) => {
   return (
     <div
       className={`pt-2 w-[90%] flex flex-col my-1 flex-grow shadow-lg cursor-pointer bg-gray-800 text-white rounded-[40px] hover:shadow-xl relative ${
-        isVisible ? `slide-in-left${index}` : ""
+        isVisible ? `slide-in-left2` : ""
       }`}
       ref={divRef}
     >

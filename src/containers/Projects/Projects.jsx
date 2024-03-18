@@ -11,7 +11,8 @@ import robotics3 from '../../assets/robotics3.jpg'
 const Projects = () => {
   const {darkMode} = useContext(DarkModeContext);
   return (
-    <div id='Projects' className={`${darkMode ? "bg-[#cbd4d4]" : "bg-[#16181d]"} flex flex-col  items-center lg:h-screen mb-24 lg:gap-12 gap-6`}>
+    <div id='Projects' className={`${darkMode ? "bg-[#cbd4d4]" : "bg-[#16181d]"} flex flex-col  items-center lg:h-[80vh] -translate-y-36 mb-24 lg:gap-12 gap-6`}>
+      <hr className='border- border-gray-400 rounded-full w-[90%]'/>
         <h1 className={`lg:text-7xl font-semibold ${darkMode ? "text-black" : "text-white"}`}>My recent work</h1>
         <h3 className={`lg:text-3xl text-center ${darkMode ? "text-black" : "text-white"}`}>Here are a few projects I&#39;ve worked on. Want to see more? Email me.</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

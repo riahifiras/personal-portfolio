@@ -8,7 +8,7 @@
 
 @keyframes slideInLeft {
   from {
-    transform: translateX(100%);
+    transform: translateX(22%);
     opacity: 0;
   }
   to {
@@ -29,7 +29,7 @@
 }
 
 .slide-in-right{
-  animation: slideInRight 2500ms ease forwards;
+  animation: slideInRight 1500ms ease forwards;
 }
 
 .slide-in-left1 {
