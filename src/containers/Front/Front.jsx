@@ -42,12 +42,12 @@ const Front = () => {
   return (
     <div id='Home'>
       {!scrolling ? (
-        <div className='w-full h-[100vh] -mt-16 fixed'>
-          <div className='w-full h-screen translate-y-24 lg:translate-y-0 flex justify-between items-center flex-col-reverse lg:flex-row relative'>
-            <div className='flex flex-col up lg:ml-40 items-center text-left lg:items-start w-3/4 lg:w-1/2 slide-in-right'>
-              <h1 className='flex flex-col gap-4 lg:text-5xl text-xl font-semibold font-euro unselectable'><span className={darkMode ? "text-black" : "text-white"}>Hi, I&#39;m</span><span className='whitespace-nowrap name'><span className={darkMode ? "text-black" : "text-white"}>Firas </span><span className='text-blue-700'>Riahi</span></span></h1>
+        <div className='w-full h-screen -mt-20 fixed'>
+          <div className='w-full h-screen translate-y-24 lg:translate-y-0 flex justify-between items-center flex-col lg:flex-row relative'>
+            <div className='flex flex-col lg:ml-40 items-center text-left lg:items-start lg:w-1/2 lg:slide-in-right'>
+              <h1 className='flex flex-col lg:gap-4 gap-8 lg:text-5xl md:text-3xl text-2xl font-semibold font-euro unselectable'><span className={darkMode ? "text-black" : "text-white"}>Hi, I&#39;m</span><span className='whitespace-nowrap 2xl:text-[140px] xl:text-[120px] lg:[110px] md:text-[100px] text-[60px] lg:mb-0 mb-4'><span className={darkMode ? "text-black" : "text-white"}>Firas </span><span className='text-blue-700'>Riahi</span></span></h1>
               <br />
-              <h3 className='unselectable lg:text-2xl text-md font-[500]'>
+              <h3 className='unselectable lg:text-2xl text-xl font-[500] w-full'>
               <span className={darkMode ? "text-black" : "text-white"}>I am a</span>
                 <span className='text-blue-700'>
                   <Typewriter
@@ -59,7 +59,7 @@ const Front = () => {
               </h3>
               <button onClick={handleDownload} className='unselectable z-30 flex justify-center items-center h-10 w-36 mt-6 rounded-full bg-blue-700 text-white text-md font-semibold hover:bg-blue-600 transition duration-200'>Download CV</button>
             </div>
-            <img src={me} alt="" className='unselectable -translate-y-24 lg:-translate-y-0 absolute lg:right-40 -bottom-16 size' />
+            <img src={me} alt="" className='unselectable  -translate-y-20 lg:-translate-y-0 absolute lg:right-40 -bottom-16 custom-height-responsive xl:h-[740px] lg:h-[600px] w-auto' />
           </div>
         </div>
       ) : (

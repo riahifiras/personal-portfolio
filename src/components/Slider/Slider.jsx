@@ -14,21 +14,17 @@ function PauseOnHover({ set }) {
         arrows: false
     };
     return (
-        <div className="slider-container w-[50%]">
+        <div className="slider-container w-[90%] lg:w-[50%]">
             <Slider {...settings}>
                 {set.map((element, index) => {
                     return (
-                        <div key={index} className="shadow-lg aspect-video w-[80%] h-[360px] bg-black flex justify-center items-center">
+                        <div key={index} className="shadow-lg aspect-video w-[80%] lg:h-[360px] h-[256px] bg-black flex justify-center items-center">
                             <img
                                 src={element.image}
                                 alt="photo"
                                 className="object-contain h-full w-full"
                             />
                         </div>
-
-
-
-
                     )
                 })}
             </Slider>

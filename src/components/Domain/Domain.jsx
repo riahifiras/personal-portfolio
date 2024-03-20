@@ -63,7 +63,7 @@ const Domain = ({ index, icon, title, tools, description }) => {
       ref={divRef}
     >
       <div
-        className={`flex justify-between items-center px-10 w-full h-[132px] absolute`}
+        className={`flex justify-between gap-4 items-center px-10 w-full h-[132px] absolute`}
         onClick={handleDropdownToggle}
       >
         <img src={icon} alt="" className="h-16 w-auto" />

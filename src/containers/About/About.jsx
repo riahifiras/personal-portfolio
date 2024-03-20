@@ -13,11 +13,11 @@ const About = () => {
   }, []);
 
   return (
-    <div id='About' className={`lg:h-screen translate-y-[100vh] mb-[100vh] ${darkMode ? "bg-[#cbd4d4]" : "bg-[#16181d]"}`}>
-      <div className='lg:h-[86vh] almost flex gap-10 items-start bg-blue-700 text-white'>
-        <div className='flex flex-col justify-center text-left pl-40 pr-20 w-[52%] items h-full gap-20 bg-gray-800'>
+    <div id='About' className={` translate-y-[100vh] mb-[100vh] ${darkMode ? "bg-[#cbd4d4]" : "bg-[#16181d]"}`}>
+      <div className='lg:h-[86vh] flex lg:flex-row flex-col lg:gap-10 items-start bg-blue-700 text-white'>
+        <div className='flex flex-col justify-center text-left lg:pl-40 lg:pr-20 px-10 lg:w-[52%] w-full items h-full lg:gap-20 gap-6 bg-gray-800 lg:py-0 py-4'>
           <h1 className='slide-in-right text-6xl font-semibold flex items-center'>About<span className='text-blue-700'>&nbsp;me</span></h1>
-          <div className='slide-in-right flex flex-col gap-10'>
+          <div className='slide-in-right flex flex-col lg:gap-10 gap-4'>
             <div className='lg:text-xl text-md'>
               I am currently pursuing a degree in Computer Science Engineering at the National School of Computer Science (ENSI).
             </div>
@@ -29,7 +29,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className='h-full w-[40%] py-4 flex flex-col justify-around items-center'>
+        <div className='lg:h-full h-[720px] lg:w-[40%] w-full py-4 flex flex-col justify-around items-center pb-28'>
           {showDomains &&
             domains.map(({ id, icon, title, tools, description }, index) => (
               <Domain

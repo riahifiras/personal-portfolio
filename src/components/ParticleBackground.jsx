@@ -98,7 +98,7 @@ const ParticleBackground = () => {
         id="tsparticles"
         particlesLoaded={particlesLoaded}
         options={options}
-        className='-z-30 w-full h-[100vh] -mt-16 fixed'
+        className='-z-30 w-full h-screen -mt-20 fixed'
       />
     );
   }

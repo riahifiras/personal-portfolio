@@ -1,15 +1,14 @@
-.size {
-    height: 740px;
-    width: auto;
-    transform: translateY(-64px);
-}
 
-.name {
-    font-size: 140px;
-}
 
-.up {
-    transform: translateY(0);
+.custom-height-responsive {
+    height: 600px;
+  }
+
+  @media screen and (max-height: 800px){
+    /* Styles for screens with a height up to 600px */
+    .custom-height-responsive {
+      height: 420px;
+    }
 }
 
 @keyframes slideInRight {

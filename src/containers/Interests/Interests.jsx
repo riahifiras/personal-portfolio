@@ -17,7 +17,7 @@ const Interests = () => {
     <div id='Interests' className={`w-full lg:h-[92vh] flex flex-col justify-around -translate-y-24 gap-6 lg:gap-0 my-10 ${darkMode ? "bg-[#cbd4d4]" : "bg-[#16181d]"}`}>
 
 
-      <div className='flex flex-col w-full px-40'>
+      <div className='flex flex-col w-full lg:px-40 px-10'>
         <div className='flex flex-col items-start gap-8 py-2'>
           <h1 className={`text-6xl font-semibold ${darkMode ? "text-black" : "text-white"}`}>Interests</h1>
           <div className='flex flex-col items-start gap-2'>
@@ -30,22 +30,22 @@ const Interests = () => {
           </div>
         </div>
       </div>
-      <div className="w-full h-[60%] gap-24 px-40 flex justify-around items-center">
-        <div className='w-[40%] flex flex-col gap-4 justify-center items-center'>
-          <div className={`w-[72%] px-8 gap-12 h-28 rounded-[40px] cursor-pointer shadow-md flex justify-around items-center text-white text-xl font-semibold duration-200 transition-colors ease-in-out ${interest === cpc ? "bg-blue-700" : "bg-gray-800"}`} onClick={() => setInterest(cpc)}>
-            <img className='w-16 h-auto' src={cpcIcon} alt="" />
+      <div className="w-full h-[60%] lg:gap-24 gap-10 lg:px-40 flex lg:flex-row flex-col-reverse justify-around items-center">
+        <div className='lg:w-[40%] flex lg:flex-col gap-2 lg:justify-center justify-between items-center'>
+          <div className={`xl:w-[72%] lg:w-[100%] w-[110px] lg:text-left text-center lg:px-8 lg:gap-12 h-[110px] lg:h-28 rounded-[40px] cursor-pointer shadow-md flex lg:flex-row flex-col justify-center lg:justify-around items-center text-white lg:text-xl text-sm lg:font-semibold duration-200 transition-colors ease-in-out ${interest === cpc ? "bg-blue-700" : "bg-gray-800"}`} onClick={() => setInterest(cpc)}>
+            <img className='lg:w-16 w-12 h-auto' src={cpcIcon} alt="" />
             <h3 className='w-[80%]'>
               Competetive programming
             </h3>
           </div>
-          <div className={`w-[72%] px-8 gap-12 h-28 rounded-[40px] cursor-pointer shadow-md flex justify-around items-center text-white text-xl font-semibold duration-200 transition-colors ease-in-out ${interest === ctf ? "bg-blue-700" : "bg-gray-800"}`} onClick={() => setInterest(ctf)}>
-            <img className='w-16 h-auto' src={securityIcon} alt="" />
+          <div className={`xl:w-[72%] lg:w-[100%] w-[110px] lg:text-left text-center lg:px-8 lg:gap-12 h-[110px] lg:h-28 rounded-[40px] cursor-pointer shadow-md flex lg:flex-row flex-col justify-center lg:justify-around items-center text-white lg:text-xl text-sm lg:font-semibold duration-200 transition-colors ease-in-out ${interest === ctf ? "bg-blue-700" : "bg-gray-800"}`} onClick={() => setInterest(ctf)}>
+            <img className='lg:w-16 w-12 h-auto' src={securityIcon} alt="" />
             <h3 className='w-[80%]'>
               Cybersecurity
             </h3>
           </div>
-          <div className={`w-[72%] px-8 gap-12 h-28 rounded-[40px] cursor-pointer shadow-md flex justify-around items-center text-white text-xl font-semibold duration-200 transition-colors ease-in-out ${interest === robotics ? "bg-blue-700" : "bg-gray-800"}`} onClick={() => setInterest(robotics)}>
-            <img className='w-16 h-auto' src={roboticsIcon} alt="" />
+          <div className={`xl:w-[72%] lg:w-[100%] w-[110px] lg:text-left text-center lg:px-8 lg:gap-12 h-[110px] lg:h-28 rounded-[40px] cursor-pointer shadow-md flex lg:flex-row flex-col justify-center lg:justify-around items-center text-white lg:text-xl text-sm lg:font-semibold duration-200 transition-colors ease-in-out ${interest === robotics ? "bg-blue-700" : "bg-gray-800"}`} onClick={() => setInterest(robotics)}>
+            <img className='lg:w-16 w-12 h-auto' src={roboticsIcon} alt="" />
             <h3 className='w-[80%]'>
               Robotics
             </h3>

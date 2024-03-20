@@ -35,7 +35,7 @@ function Header() {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 844) {
+      if (window.innerWidth < 910) {
         setIsSmall(true);
       } else {
         setIsSmall(false);
@@ -64,18 +64,18 @@ function Header() {
         <>
           <div
             id='me'
-            className={`h-16 sticky top-0 right-0 w-full flex justify-between items-center z-10 text-black`}
+            className={`h-20 sticky top-0 right-0 w-full flex justify-between items-center z-10 text-black`}
             style={headerStyle}
           >
             <h3
-              className='lg:text-3xl text-xl font-bold ml-4 text-blue-700 cursor-pointer'
+              className='lg:text-3xl text-3xl font-bold ml-4 text-blue-700 cursor-pointer'
               onClick={() => (window.location.pathname = '/')}
             >
               Firas.
             </h3>
             <button
               onClick={toggleMenu}
-              className='flex items-center justify-center mr-4 text-sm font-semibold'
+              className='flex items-center justify-center mr-4 text-xl font-semibold'
             >
               <FaTimes />
             </button>
@@ -86,18 +86,18 @@ function Header() {
     }
     return (
       <div
-        className={`h-16 sticky top-0  right-0 w-full flex justify-between items-center z-10 text-black`}
-        style={headerStyle}
+      className={`h-20 sticky top-0 right-0 w-full flex justify-between items-center z-10 text-${darkMode ? "black" : "white"}`}
+      style={headerStyle}
       >
         <h3
-          className='lg:text-3xl text-xl font-bold ml-4 text-blue-700 cursor-pointer'
+          className='lg:text-3xl text-3xl font-bold ml-4 text-blue-700 cursor-pointer'
           onClick={() => (window.location.pathname = '/')}
         >
           Firas.
         </h3>
         <button
           onClick={toggleMenu}
-          className='flex items-center justify-center mr-4 text-sm font-semibold'
+          className='flex items-center justify-center mr-4 text-xl font-semibold'
         >
           <FaBars />
         </button>
@@ -112,7 +112,7 @@ function Header() {
       style={headerStyle}
     >
       <h3
-        className='lg:text-4xl text-xl font-bold ml-40 text-blue-700 cursor-pointer'
+        className='lg:text-4xl text-3xl font-bold ml-40 text-blue-700 cursor-pointer'
         onClick={() => (window.location.pathname = '/')}
       >
         Firas.
