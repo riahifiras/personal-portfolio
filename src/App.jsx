@@ -1,24 +1,27 @@
-import './App.css'
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import DarkModeProvider from './context/DarkModeContext';
-import Home from './pages/Home'
-import Slider from './pages/Slider';
-import Contact from './pages/Contact';
+import { useContext } from 'react'
+import { DarkModeContext } from './context/DarkModeContext'
+import ParticleBackground from './components/ParticleBackground'
+import Header from './containers/Header/Header'
+import Front from './containers/Front/Front'
+import About from './containers/About/About'
+import Interests from './containers/Interests/Interests'
+import Projects from './containers/Projects/Projects'
+import Footer from './containers/Footer/Footer'
+
 
 function App() {
+  const {darkMode} = useContext(DarkModeContext);
   return (
     <>
-      <DarkModeProvider>
-        <BrowserRouter>
-          <Routes>
-
-            <Route path="/" element={<Home />} />
-            <Route path="/slider/:title" element={<Slider />} />
-            <Route path="/contact" element={<Contact />} />
-
-          </Routes>
-        </BrowserRouter>
-      </DarkModeProvider>
+      <Header />
+      <ParticleBackground />
+      <Front />
+      <About />
+      <div className={`${darkMode ? "bg-[#cbd4d4]" : "bg-[#16181d]"}`}>
+        <Interests/>
+        <Projects />
+        <Footer />
+      </div>
     </>
   )
 }

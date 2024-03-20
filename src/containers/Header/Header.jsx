@@ -9,7 +9,7 @@ function Header() {
   const [showMenu, setShowMenu] = useState(false);
   const [scrolling, setScrolling] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
-  const {darkMode} = useContext(DarkModeContext);
+  const { darkMode } = useContext(DarkModeContext);
 
 
   const path = window.location.pathname;
@@ -21,11 +21,11 @@ function Header() {
   const handleScroll = () => {
     const currentPosition = window.scrollY;
     setScrollPosition(currentPosition);
-  
+
     // Calculate the scroll position based on viewport height
     const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
     const scrollThreshold = 100 * vh / 100; // Change 100 to the desired percentage
-  
+
     if (currentPosition > scrollThreshold) {
       setScrolling(true);
     } else {
@@ -80,7 +80,7 @@ function Header() {
               <FaTimes />
             </button>
           </div>
-          {path === '/' ? <DropDownMenu toggle={toggleMenu} /> : <div></div>}
+          <DropDownMenu toggle={toggleMenu} />
         </>
       );
     }
@@ -95,16 +95,13 @@ function Header() {
         >
           Firas.
         </h3>
-        {path === '/' ? (
-          <button
-            onClick={toggleMenu}
-            className='flex items-center justify-center mr-4 text-sm font-semibold'
-          >
-            <FaBars />
-          </button>
-        ) : (
-          <div></div>
-        )}
+        <button
+          onClick={toggleMenu}
+          className='flex items-center justify-center mr-4 text-sm font-semibold'
+        >
+          <FaBars />
+        </button>
+
       </div>
     );
   }
@@ -120,7 +117,7 @@ function Header() {
       >
         Firas.
       </h3>
-      {path === '/' ? <Navbar /> : <div></div>}
+      <Navbar />
     </div>
   );
 }
