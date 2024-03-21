@@ -1,8 +1,8 @@
 {
-  "homepage": "http://riahifiras.github.io/personal-portfolio/",
   "name": "front",
   "private": true,
   "version": "0.0.0",
+  "homepage": "http://riahifiras.github.io/personal-portfolio/",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
