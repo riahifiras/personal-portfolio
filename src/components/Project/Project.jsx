@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import ProjectPopup from "../ProjectPopup/ProjectPopup";
 
-const Project = ({ image, url, name }) => {
+const Project = ({ showPopup, openPopup, image, url, name }) => {
+  // console.log(showPopup);
   const [isHovered, setIsHovered] = useState(false);
-  const [showPopup, setShowPopup] = useState(false);
 
   const handleHover = () => {
     setIsHovered(true);
@@ -11,14 +11,6 @@ const Project = ({ image, url, name }) => {
 
   const handleMouseLeave = () => {
     setIsHovered(false);
-  };
-
-  const openPopup = () => {
-    setShowPopup(true);
-  };
-
-  const closePopup = () => {
-    setShowPopup(false);
   };
 
   return (
@@ -48,7 +40,6 @@ const Project = ({ image, url, name }) => {
           </div>
         )}
       </div>
-      {showPopup && <ProjectPopup onClose={closePopup} />}
     </>
   );
 };

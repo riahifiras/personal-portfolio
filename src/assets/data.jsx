@@ -1,4 +1,4 @@
-import { icon1, icon2, icon3, icon4, react, html, css, js, flask, csharp, cplusplus, express, figma, canva, solidworks, catia, autocad, photoshop, illustrator, unity, tailwindcss, python, logo, robotics, cp, hack, security, backgroundImg} from '../components/Images';
+import { icon1, icon2, icon3, icon4, react, html, css, js, flask, csharp, cplusplus, express, figma, canva, solidworks, catia, autocad, photoshop, illustrator, unity, tailwindcss, python, logo} from '../components/Images';
 
 const domains = [
     {

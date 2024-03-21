@@ -1,4 +1,3 @@
-import image1 from '../assets/profile.png';
 import me from '../assets/me1.png';
 import icon1 from '../assets/icons/coding.png'
 import icon2 from '../assets/icons/game-development.png'
@@ -26,10 +25,9 @@ import cpcIcon from '../assets/icons/brainstorm.png'
 import securityIcon from '../assets/icons/cyber-security.png'
 import roboticsIcon from '../assets/icons/rob.png'
 import logo from '../assets/logo.png'
-import robotics from '../assets/interests/robotics.jpg'
-import cp from '../assets/interests/cp.jpg'
-import hack from '../assets/interests/hack.jpg'
-import security from '../assets/interests/security.jpg'
-import backgroundImg from '../assets/SL-122221-47450-07.jpg'
+import ensi from '../assets/ensi.png'
+import robot from '../assets/3jeli.png'
+import sniffer from '../assets/sniffer.png'
+import station from '../assets/station.jpg'
 
-export { image1, me, icon1, icon2, icon3, icon4, react, html, css, js, flask, csharp, cplusplus, express, figma, canva, solidworks, catia, autocad, photoshop, illustrator, unity, tailwindcss, python, logo, robotics, cp, hack, security, backgroundImg, cpcIcon, securityIcon, roboticsIcon};
+export { me, icon1, icon2, icon3, icon4, react, html, css, js, flask, csharp, cplusplus, express, figma, canva, solidworks, catia, autocad, photoshop, illustrator, unity, tailwindcss, python, logo, ensi, robot, sniffer, station, cpcIcon, securityIcon, roboticsIcon};

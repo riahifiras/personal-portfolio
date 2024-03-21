@@ -1,11 +1,9 @@
-import React, { useState, useContext } from 'react';
+import { useState, useContext } from 'react';
 import { DarkModeContext } from '../../context/DarkModeContext';
-import Slider from '../../containers/Slider/Slider';
 import './Interest.css'
 
 const Interest = ({ image, title }) => {
   const [isHovered, setIsHovered] = useState(false);
-  const [isClicked, setIsClicked] = useState(false);
   const {darkMode} = useContext(DarkModeContext);
 
   const handleHover = () => {
