@@ -34,7 +34,8 @@ const Front = () => {
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = 'src/assets/CVang.pdf';
+    link.href = `${import.meta.env.BASE_URL}/CVang.pdf`; // Adjust the path
+    console.log(link.href);
     link.download = 'CV.pdf';
     link.click();
   };
