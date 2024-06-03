@@ -61,12 +61,13 @@ const Domain = ({ index, icon, title, tools, description }) => {
         isVisible ? `slide-in-left2` : ""
       }`}
       ref={divRef}
+      onClick={handleDropdownToggle}
     >
       <div
-        className={`flex justify-between gap-4 items-center px-10 w-full h-[132px] absolute`}
-        onClick={handleDropdownToggle}
+        className={`flex justify-between pt-8 gap-4 items-center px-10 w-full absolute`}
+        
       >
-        <img src={icon} alt="" className="h-16 w-auto" />
+        <img src={icon} alt="" className="h-10 w-auto" />
         <h1 className="w-[70%] font-semibold text-xl">{title}</h1>
         <div className="relative">
           <IoIosArrowDown
@@ -85,7 +86,7 @@ const Domain = ({ index, icon, title, tools, description }) => {
         <h2 className="px-10 pb-2 text-md">Tools i use</h2>
         <div className="px-10 pb-20 flex gap-2 w-full">
           {tools.map((pic, index) => {
-            return <img key={index} className="w-8 h-auto" src={pic} alt="" />;
+            return <img key={index} className="w-6 h-auto" src={pic} alt="" />;
           })}
         </div>
       </div>

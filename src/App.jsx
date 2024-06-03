@@ -11,7 +11,7 @@ import Footer from './containers/Footer/Footer';
 
 function App() {
   const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
-  const [buttonAboveFooter, setButtonAboveFooter] = useState(false);
+  const [buttonAboveFooter, setButtonAboveFooter] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {

@@ -1,8 +1,12 @@
 import cpc2 from "./assets/cpc2.jpg";
 import cpc3 from "./assets/cpc3.jpg";
+import cpc6 from "./assets/cpc6.jpg";
 
 import ctf1 from "./assets/ctf1.jpg";
 import ctf4 from "./assets/ctf4.jpg";
+import ctf5 from "./assets/ctf5.jpg";
+import ctf6 from "./assets/ctf6.jpeg";
+import ctf7 from "./assets/ctf7.png";
 
 import robotics2 from "./assets/robotics2.jpg";
 import robotics3 from "./assets/robotics3.jpg";
@@ -27,6 +31,10 @@ const cpc = [
     },
     {
         image: cpc3,
+        description: "text"
+    },
+    {
+        image: cpc6,
         description: "text"
     },
 ]
@@ -61,6 +69,18 @@ const ctf = [
     },
     {
         image: ctf4,
+        description: "text"
+    },
+    {
+        image: ctf5,
+        description: "text"
+    },
+    {
+        image: ctf6,
+        description: "text"
+    },
+    {
+        image: ctf7,
         description: "text"
     },
 ]

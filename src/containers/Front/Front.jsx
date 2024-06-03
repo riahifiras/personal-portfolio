@@ -34,7 +34,7 @@ const Front = () => {
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = 'src/assets/CV.pdf';
+    link.href = 'src/assets/CVang.pdf';
     link.download = 'CV.pdf';
     link.click();
   };
@@ -59,7 +59,7 @@ const Front = () => {
               </h3>
               <button onClick={handleDownload} className='unselectable z-30 flex justify-center items-center h-10 w-36 mt-6 rounded-full bg-blue-700 text-white text-md font-semibold hover:bg-blue-600 transition duration-200'>Download CV</button>
             </div>
-            <img src={me} alt="" className='unselectable  -translate-y-20 lg:-translate-y-0 absolute lg:right-40 -bottom-16 custom-height-responsive xl:h-[740px] lg:h-[600px] w-auto' />
+            <img src={me} alt="" className='unselectable  -translate-y-20 lg:-translate-y-0 absolute lg:right-40 -bottom-16 custom-height-responsive xl:h-[700px] lg:h-[600px] w-auto' />
           </div>
         </div>
       ) : (

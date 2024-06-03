@@ -1,8 +1,9 @@
-import { useRef, useEffect, useContext } from "react";
+import { useState, useRef, useEffect, useContext } from "react";
 import { DarkModeContext } from '../../context/DarkModeContext'
 import { RxCross2 } from "react-icons/rx";
 
 const ProjectPopup = ({ info, onClose }) => {
+    const [isVideo, setIsVideo] = useState(false);
     const { darkMode } = useContext(DarkModeContext);
     const popupRef = useRef(null);
 
@@ -25,7 +26,16 @@ const ProjectPopup = ({ info, onClose }) => {
             <div className="flex bg-white lg:flex-row flex-col lg:h-[540px] h-[80vh] lg:w-[1000px] w-[80%] rounded-lg" ref={popupRef}>
                 <div className="relative lg:h-[540px] overflow-hidden h-[100%] w-full bg-transparent">
                     <div style={{ '--image-url': `url(${info.image})` }} className="absolute h-[114%] -top-4 -left-4 w-[114%] bg-[image:var(--image-url)] bg-no-repeat bg-cover bg-center blur-md hue-rotate-0 backdrop-blur-0 backdrop-hue-rotate-0 shadow-none drop-shadow-none grayscale-0 sepia-0" />
-                    <img className="absolute lg:h-[540px] h-full object-contain lg:rounded-l-lg rounded-t-lg lg:w-[600px] w-full" src={info.image} alt="" />
+                    {isVideo ? <iframe
+      className="absolute w-full lg:h-[540px] h-full"
+      src={`https://www.youtube.com/embed/RnDC9MXSqCY`}
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+      title="Embedded youtube"
+    /> : <img className="absolute lg:h-[540px] h-full object-contain lg:rounded-l-lg rounded-t-lg lg:w-[600px] w-full" src={info.image} alt="" />
+                    }
+
                     <button
                         className="lg:hidden absolute right-4 top-4 flex justify-center items-center text-xl font-bold h-8 w-8 text-black rounded-full"
                         onClick={onClose}
@@ -47,7 +57,7 @@ const ProjectPopup = ({ info, onClose }) => {
                     </div>
                     <p className="text-left text-lg">{info.description}</p>
                     <div className="flex gap-2">
-                        <button className="bg-blue-700 shadow-lg text-white rounded-full h-8 w-24">View demo</button>
+                        <button className="bg-blue-700 shadow-lg text-white rounded-full h-8 w-24" onClick={() => setIsVideo(true)}>View demo</button>
                         <button className="bg-blue-700 shadow-lg text-white rounded-full h-8 w-24" onClick={() => window.open(info.url)}>See more</button>
                     </div>
                 </div>
